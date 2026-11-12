@@ -1,9 +1,9 @@
 {
   "$schema": "https://mirrorneuron.io/schemas/blueprint/v1/extensions/ui.schema.json",
   "starter_questions": [
-    "What is your mission?",
-    "What requires my approval?",
-    "How do you collaborate with your marketing co-worker?"
+    "What must I review before an email is sent?",
+    "Where do I add contacts and the AgentMail key?",
+    "What happens if a send cannot be confirmed?"
   ],
   "init_config_review": {
     "required": true,
@@ -88,7 +88,7 @@
   },
   "setup_guide": {
     "schema": "otterdesk.setup_guide.v1",
-    "introduction": "Drafts campaigns and replies, then sends only the exact emails and recipients you approve.",
+    "introduction": "I'll draft campaign emails and replies for you to review before sending. Add your contacts through the file control and your AgentMail key through the secure field. Sending requires approval of the exact sender, copy and recipients.",
     "sample": {
       "available": false
     },
@@ -173,6 +173,7 @@
         "required": false,
         "default": []
       }
-    ]
+    ],
+    "prompt_file": "@/payloads/prompts/setup.md"
   }
 }
