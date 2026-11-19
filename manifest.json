@@ -4,7 +4,7 @@
   "name": "GTM executor",
   "tagline": "Draft campaigns and send only approved emails",
   "payload_api": "mn.blueprint.v1",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Drafts campaigns and replies, then sends only the exact emails and recipients you approve.",
   "workflow": "workflow.json",
   "execution": "execution.json",

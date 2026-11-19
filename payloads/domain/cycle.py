@@ -78,4 +78,4 @@ def cycle(context, stop_event):
             publish(context,'outcome-'+key+'-'+digest(result),'delivery_outcome',{'campaign_id':key,'counts':result},'Observed campaign delivery results; accepted messages are not proof of inbox delivery.')
         elif status == 'pending':
             totals['pending'] += 1
-    return {'status':'running','peer':peer_status,'inbox_caught_up':caught_up,'contacts':sum(counts.values()),'quarantined':len(state.get('meta','quarantine',[])),**totals}
+    return {'status':'stopped' if stop_event.is_set() else 'running','peer':peer_status,'inbox_caught_up':caught_up,'contacts':sum(counts.values()),'quarantined':len(state.get('meta','quarantine',[])),**totals}

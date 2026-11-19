@@ -54,6 +54,10 @@ Drafts never receive AgentMail `send_at`. Provider rate/transport failures back
 off; ambiguous sends stop and require operator reconciliation, never automatic
 resend. An accepted message is not proof of inbox delivery or business results.
 
+## Review the latest cycle
+
+The campaign execution report shows aggregate approvals, accepted sends, suppressions and outcomes needing reconciliation. Counts apply to the evaluated campaigns. Provider acceptance alone leaves inbox delivery unknown. Open the report from the run or open `web/index.html` in the output folder.
+
 ## Validation
 
 Run `python -m pytest tests/test_gtm_services.py -q` from the catalog repository

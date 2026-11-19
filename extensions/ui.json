@@ -1,5 +1,12 @@
 {
   "$schema": "https://mirrorneuron.io/schemas/blueprint/v1/extensions/ui.schema.json",
+  "web_ui": {
+    "enabled": true,
+    "adapter": "static_html",
+    "kind": "output",
+    "title": "Campaign execution report",
+    "description": "Inspect the latest saved cycle, delivery receipts and pending approvals in aggregate."
+  },
   "starter_questions": [
     "What must I review before an email is sent?",
     "Where do I add contacts and the AgentMail key?",
@@ -88,7 +95,7 @@
   },
   "setup_guide": {
     "schema": "otterdesk.setup_guide.v1",
-    "introduction": "I'll draft campaign emails and replies for you to review before sending. Add your contacts through the file control and your AgentMail key through the secure field. Sending requires approval of the exact sender, copy and recipients.",
+    "introduction": "I can explain what an email review looks like before you connect an inbox. To draft for your own campaign, select the contacts file and enter the inbox details in their dedicated fields. You review the exact email before sending.",
     "sample": {
       "available": false
     },
@@ -174,6 +181,11 @@
         "default": []
       }
     ],
-    "prompt_file": "@/payloads/prompts/setup.md"
+    "prompt_file": "@/payloads/prompts/setup.md",
+    "run_guidance": {
+      "on_start": "I’ll check for approved campaign ideas and incoming replies. When a draft needs your decision, you can review its exact copy and recipients.",
+      "output_ready": "Open the saved marketing status to check which drafts still need a decision.",
+      "web_ui_ready": "Open the execution report and check pending approvals or recipient outcomes that need review."
+    }
   }
 }

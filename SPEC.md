@@ -34,6 +34,8 @@ the delivery boundary. Campaign revision or sender changes cannot reuse approval
 
 ## Data and failures
 
+The campaign execution report shows aggregate approvals, accepted sends, suppressions and outcomes needing reconciliation. Counts apply to the evaluated campaigns. Provider acceptance alone leaves inbox delivery unknown. Each status update writes the authoritative JSON first, then the optional HTML and its digest-verified local handle. A failed cycle displays its own dated assessment.
+
 Persistent state belongs under the SDK-provided Job data directory. Each cycle publishes the declared JSON status to the run store and the configured output folder through the blueprint service API. Public status
 is the bounded `marketing_status.json` artifact, with generic errors rather than
 private text or transport bodies. Missing models, browser evidence, runtime,
