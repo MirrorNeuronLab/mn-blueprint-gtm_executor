@@ -24,7 +24,8 @@
       "maxMembers": 5,
       "groupKey": "inputs.payload.collaboration_group_id",
       "peersKey": "inputs.payload.collaboration_peers",
-      "legacyPeerKey": "inputs.payload.peer_job_id"
+      "legacyPeerKey": "inputs.payload.peer_job_id",
+      "delivery": "mailbox"
     }
   },
   "runtime_features": [
