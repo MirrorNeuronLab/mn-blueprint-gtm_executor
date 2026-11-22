@@ -19,7 +19,7 @@
       ],
       "goalKey": "inputs.payload.goal_id",
       "commonGoalKey": "inputs.payload.common_goal",
-      "sameRuntime": true,
+      "sameRuntime": false,
       "schema": "mn.collaboration.group.v1",
       "maxMembers": 5,
       "groupKey": "inputs.payload.collaboration_group_id",
